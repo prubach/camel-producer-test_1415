@@ -15,10 +15,10 @@ public class ProducerRest extends RouteBuilder {
     public void configure() throws Exception {
         restConfiguration()
                 .component("servlet")
-                .bindingMode(RestBindingMode.json);
+                .bindingMode(RestBindingMode.xml);
 
         rest("/student")
-                .produces("application/json")
+                .produces("application/xml")
                 .get("/get/{fname}/{lname}")
                 .to("direct:student");
                 //.route().transform().simple("Witam ${header.name} !!!")

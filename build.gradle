@@ -19,6 +19,7 @@ dependencies {
     implementation "org.apache.camel.springboot:camel-servlet-starter:$camelVersion"
 
     implementation "org.apache.camel:camel-jackson:$camelVersion"
+    implementation "org.apache.camel:camel-jaxb:$camelVersion"
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

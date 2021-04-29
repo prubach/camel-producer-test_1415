@@ -1,10 +1,24 @@
 package com.example.camelproducertest;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
 
+    @XmlAttribute
     private Long id;
+    @XmlAttribute
     private String firstname;
+    @XmlAttribute
     private String lastname;
+
+
+    public Student() {
+    }
 
     public Student(Long id, String firstname, String lastname) {
         this.id = id;
